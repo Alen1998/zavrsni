@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description"content="Ovo je web stranica o lancu teretana Gyms4you" />
+<meta name="keywords"content="Gyms4you, teretana, vježbanje, sprave za vježbanje" />
+<meta http-equiv="author"content="Alen Corkovic" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: #505359;">
+	<div id="navbar">
+          <ul>
+               <li><a href="index.html">Početna</a></li>
+               <li><a href="BMI.html">BMI</a></li>
+               <li><a href="Cijenik.html">Cjenik</a></li>
+               <li><a href="Pravila.html">Pravila</a></li>
+               <li><a href="Galerija.html">Galerija</a></li>
+               <li><a href="Kontakt.html">Kontakt</a></li>
+          </ul>
+</div>
+
+<div id="racun">
+	<h1 id="druginaslov">BMI</h1>
+	<p id="par1">Indeks tjelesne mase ili BMI je samo okvirni pokazatelj za procjenu tjelesne težine.
+Računa se na način da se tjelesna masa osobe u kilogramima podijeli sa kvadratom visine u metrima: <br>
+<br>
+BMI = m / h2<br>
+<br>
+BMI se ipak ne može uzeti kao relevantno mjerilo za procjenu debljine i zdravlja pojedinačne osobe jer ne uzima u obzir tjelesnu građu pojedinca. BMI ne može ilustrirati postotak masnog tkiva u odnosu na mišićnu ili koštanu masu, a to su osnovni kriteriji za procjenu je li određena osoba debela ili mršava. 
+Pojedinci s velikom tjelesnom masom i visokim BMI indeksom ne mogu se automatski kategorizirati kao pretili. Kod sportaša ili krupno građenih ljudi npr., udio mišićne i koštane mase u odnosu na visinu je velik, ali to ne znači da su debeli.<br>
+<br>
+Ovaj kalkulator nije primjeren za izračun indeksa tjelesne mase kod djece</p>
+	<form id="forma">
+		Your Weight(kg): <input type="text" name="weight" size="10"><br />
+		Your Height(cm): <input type="text" name="height" size="10"><br />
+		<input type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
+		Your BMI: <input type="text" name="bmi" size="15"><br />
+		This Means: <input type="text" name="meaning" size="25"><br />
+		<input type="reset" value="Reset" />
+	</form>
+	</div>
+<script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){	
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "That you are too thin."
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "That you are healthy."
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+
+</body>
+<footer>
+  <p>
+    Powered by <a href="http://ss-tehnicka-zg.skole.hr/" target="_blank">TŠZ</a>
+  </p>
+  <p>&copy; Copyright 2017. Sva prava pridržana </p>
+</footer>

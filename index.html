@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description"content="Ovo je web stranica o lancu teretana Gyms4you" />
+<meta name="keywords"content="Gyms4you, teretana, vježbanje, sprave za vježbanje" />
+<meta http-equiv="author"content="Alen Corkovic" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Navigation -->
+<div id="navbar">
+          <ul>
+               <li><a href="index.html">Početna</a></li>
+               <li><a href="BMI.html">BMI</a></li>
+               <li><a href="Cijenik.html">Cjenik</a></li>
+               <li><a href="Pravila.html">Pravila</a></li>
+               <li><a href="Galerija.html">Galerija</a></li>
+               <li><a href="Kontakt.html">Kontakt</a></li>
+          </ul>
+</div>
+
+<!-- Slide Show -->
+<div>
+  <img class="mySlides" src="prva.jpg" style="width:100%">
+  <img class="mySlides" src="druga.jpg" style="width:100%">
+  <img class="mySlides" src="treca.jpg" style="width:100%">
+</div>
+
+
+
+<div class="main">
+  <h1 class="naslov">Gyms4you</h1>
+  <div id="p1"><i>Biti fit lalvovski je posao</i></div>
+<div id="p2">
+	Gyms4you su suvremeno uređeni klubovi s vrhunskom TechnoGym opremom. Gyms4you klubovi rade non-stop, svih 7 dana u tjednu,
+od 0 do 24 sata! Članska iskaznica omogućava pristup svim klubovima, na svim lokacijama.
+</div>
+</div>
+<!-- Footer -->
+<footer>
+  <p>
+    Powered by <a href="http://ss-tehnicka-zg.skole.hr/" target="_blank">TŠZ</a>
+  </p>
+  <p>&copy; Copyright 2017. Sva prava pridržana </p>
+</footer>
+</body>
+<! Automatic Slideshow - change image every 3 seconds>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+</html>

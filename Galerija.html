@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description"content="Ovo je web stranica o lancu teretana Gyms4you" />
+<meta name="keywords"content="Gyms4you, teretana, vježbanje, sprave za vježbanje" />
+<meta http-equiv="author"content="Alen Corkovic" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div id="navbar">
+          <ul>
+               <li><a href="index.html">Početna</a></li>
+               <li><a href="BMI.html">BMI</a></li>
+               <li><a href="Cijenik.html">Cjenik</a></li>
+               <li><a href="Pravila.html">Pravila</a></li>
+               <li><a href="Galerija.html">Galerija</a></li>
+               <li><a href="Kontakt.html">Kontakt</a></li>
+          </ul>
+</div>
+		<div class="slideshow-container">
+		  <div class="mySlides fade">
+		    <div class="numbertext">1 / 5</div>
+		    <img src="prva2.jpg" style="width:100%">
+		    <div class="text">Slika 1</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">2 / 5</div>
+		    <img src="DRUGA2.jpg" style="width:100%">
+		    <div class="text">Slika 2</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">3 / 5</div>
+		    <img src="treca2.jpg" style="width:100%">
+		    <div class="text">Slika 3</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">4 / 5</div>
+		    <img src="cetvrta2.jpg" style="width:100%">
+		    <div class="text">Slika 4</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">5 / 5</div>
+		    <img src="peta2.jpg" style="width:100%">
+		    <div class="text">Slika 5</div>
+		  </div>
+
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+
+		<script>
+			var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+		</script>
+<footer>
+  <p>
+    Powered by <a href="http://ss-tehnicka-zg.skole.hr/" target="_blank">TŠZ</a>
+  </p>
+  <p>&copy; Copyright 2017. Sva prava pridržana </p>
+</footer>
